@@ -40,7 +40,7 @@ def process_benchmarks(benchmark_dir):
             # print(desc)
             sem = mean / math.sqrt(nobs)
             price = get_price(instance_type)
-            price_per_second = float(price) / 360.0
+            price_per_second = float(price) / 3600.0
             mean_cost = price_per_second * mean
             print(instance_type, arch, vcpu, mb, instance_storage, observations, nobs, minmax[0], minmax[1],
                   mean, sem, variance, skewness, kurtosis, price, price_per_second, mean_cost, sep="\t")
